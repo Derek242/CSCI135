@@ -1,9 +1,9 @@
 #include <iostream>
-
+using namespace std;
 //printing
 
 int main(){
-    std::cout << "Hello, World!\n";
-    std::cout << "C++ is fun!";
+    cout << "Hello, World!\n";
+    cout << "C++ is fun!";
 
 }
