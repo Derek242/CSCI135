@@ -27,10 +27,14 @@ int main(){
     }
     //reversal if OG input is negative
     if (n<0){
-        for (int i = 0)
-
+        for (int i = 0; i < result.length(); i++){
+            if (result[i] == '0'){
+                result[i] = '1';
+            }
+            else if (result[i] == '1'){
+            result[i] = '0';
+            }
+        }
     }
-    
-
-
+    cout << "Binary string: " << result << endl;
 }
