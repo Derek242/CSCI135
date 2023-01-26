@@ -13,11 +13,12 @@ int main(){
     cout << "month	expense	remaining balance of budget\n";
     for (int i = 1; i <= 12; i++){
         if (i<=6){
-            cout << i << "             " << monthly << "               " << annual-monthly * i << endl;
+            printf("%5d\t%7.2f\t%27.2f\n", i, monthly, annual-=monthly);          
+        
     
         }
         else if (i>6){
-            cout << i << "              " << inflation << "             " << annual-inflation * i << endl;
+            printf("%5d\t%7.2f\t%27.2f\n", i, inflation, annual-=inflation);
             
         }
         if (i==12 && annual-inflation*i >= 0){
