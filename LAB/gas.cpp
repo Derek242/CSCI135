@@ -12,13 +12,14 @@ Then the code will output thr cost per 100 miles and how far the car can go with
 using namespace std;
 
 int main () {
-    int gallons; int fuel; int price;
+    float gallons; float fuel; float price;
     cout << "The number of gallons of gas in a tank: ", cin >> gallons;
     cout << "The fuel effciency in miles per gallon: ", cin >> fuel;
     cout << "The price of gas per gallon: ", cin >> price;
 
-    cout << "The cost per 100 miles is " << fuel/price * 100 << endl;
+    cout << "The cost per 100 miles is " << 100/fuel * price << endl;
     cout << "The car can go " << gallons*fuel << " with the gas in the tank" << endl;
     
-
+    cout << endl;
 }
+
