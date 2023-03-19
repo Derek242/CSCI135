@@ -9,11 +9,11 @@ int main(){
     cout << "Enter a symbol other than space: " << endl;
     cin >> symbol;
     
-    for (int i = 0; i < num; i++){
+    for (int i = 1; i <= num; i++){
         for (int blank = num - i; blank > 0; blank--)
             cout << " ";
         
-        for(int sym = 0; sym < i; sym++){
+        for(int sym = 1; sym <= i; sym++){
             cout << symbol;
         }
         cout << endl;
