@@ -3,7 +3,7 @@
 Author: Derek Ni
 Course: CSCI-135
 Instructor: Genady Maryash
-Assignment: Homework E7.16
+Assignment: Homework E8.1
 
 Description: 
 Write a program that carries out the following tasks:
@@ -22,14 +22,30 @@ Read the message into a string variable and print it
 using namespace std;
 
 void read(string filename){
-    ifstream fin(filename);
-    for (int i = 0; i < filename.length(); i++){
+    ofstream fin;
+    fstream x;
+    string neww;
 
+    fin.open("hello.txt");
+
+    if (fin.fail()){
+        cerr << "File cannot be opened for reading." << endl;
+        exit(1);
+    }
+    
+    fin << "Hello, World!";
+    fin.close();
+
+    x.open("hello.txt");
+    while (getline(x,neww)){
+        cout << neww << endl;
     }
 
-}
+    
 
+}
 
 int main(){
-    ifstream fin("Hello.txt");
+    read("hello.txt");
 }
+
